@@ -1,0 +1,6 @@
+<div class="card" ngClass="{{this.timezoneInfo.isCurrent ? 'current' : ''}}">
+    <input type="text" [(ngModel)]="this.timezoneInfo.timezone">
+    <div>{{time  | date : 'shortTime'}}</div>
+    <button (click)="updateTime()">Refresh</button>
+    <button (click)="changeTimeZoneClicked()" [disabled]="this.timezoneInfo.isCurrent">Set current</button>
+</div>
